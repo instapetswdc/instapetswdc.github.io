@@ -57,9 +57,9 @@
 
         for (var i = 0; i < profiles.length; i++){
             getProfile(table, profiles[i])
-        }
+            callback();
 
-        callback();
+        }
     }
 
     function getProfile(table, profile){
