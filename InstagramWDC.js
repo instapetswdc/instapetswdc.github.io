@@ -54,7 +54,7 @@
 
         var profiles = ["dorito.goldenboy", "bonebone29", "jiffpom", "mensweardog", "itsdougthepug", "marutaro",
             "nala_cat", "juniperfoxx", "pumpkintheraccoon", "this_girl_is_a_squirrel", "iamlilbub", "reagandoodle",
-            "tunameltsmyheart", "loki", "maple.the.pup", "omame_munchkin", "tibbythecorgi", "toby_littledude",
+            "tunameltsmyheart", "loki", "maple.the.pup", "marniethedog", "omame_munchkin", "tibbythecorgi", "toby_littledude",
             "iggyjoey", "hamlet_the_piggy", "realdiddykong", "lionelthehog", "nevillejacobs", "jackthecockatiel"];
 
         for (var i = 0; i < profiles.length; i++){
