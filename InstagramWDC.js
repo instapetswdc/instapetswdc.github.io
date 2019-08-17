@@ -50,17 +50,23 @@
     };
 
     myConnector.getData = function(table, doneCallback){
+        var count = 0; 
+
         var profiles = ["dorito.goldenboy", "bonebone29", "jiffpom", "mensweardog", "itsdougthepug", "marutaro",
             "nala_cat", "juniperfoxx", "pumpkintheraccoon", "this_girl_is_a_squirrel", "iamlilbub", "reagandoodle",
             "tunameltsmyheart", "loki", "maple.the.pup", "omame_munchkin", "tibbythecorgi", "toby_littledude",
             "iggyjoey", "hamlet_the_piggy", "realdiddykong", "lionelthehog", "nevillejacobs", "jackthecockatiel"];
 
         for (var i = 0; i < profiles.length; i++){
-            getProfile(table, profiles[i], doneCallback);
+            getProfile(table, profiles[i]);
+            count++;
+            if (count == profiles.length){
+                doneCallback();
+            }
         }
     }
 
-    function getProfile(table, profile, doneCallback){
+    function getProfile(table, profile){
         $.getJSON("https://www.instagram.com/" + profile + "/?__a=1", function(resp) {
             var tableData = [];
             // Iterate over the JSON object
@@ -78,12 +84,12 @@
                 });
             }    
             table.appendRows(tableData);
-            doneCallback(); 
         });
     }
+    
 
     /*
-    myConnector.getData = function(table, doneCallback){
+    myConnector.getData = function(table){
         var profiles = ["dorito.goldenboy", "bonebone29", "jiffpom", "mensweardog", "itsdougthepug", "marutaro",
             "nala_cat", "juniperfoxx", "pumpkintheraccoon", "this_girl_is_a_squirrel", "iamlilbub", "reagandoodle",
             "tunameltsmyheart", "loki", "maple.the.pup", "omame_munchkin", "tibbythecorgi", "toby_littledude",
@@ -109,7 +115,6 @@
                 table.appendRows(tableData);
             });
         }
-        doneCallback(); 
     }
     */
 
