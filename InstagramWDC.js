@@ -56,10 +56,11 @@
     myConnector.getData = function(table, doneCallback){
         var count = 0; 
 
-        var profiles = ["dorito.goldenboy", "bonebone29", "jiffpom", "mensweardog", "itsdougthepug", "marutaro",
-            "nala_cat", "juniperfoxx", "pumpkintheraccoon", "this_girl_is_a_squirrel", "iamlilbub", "reagandoodle",
-            "tunameltsmyheart", "loki", "maple.the.pup", "marniethedog", "omame_munchkin", "tibbythecorgi", "toby_littledude",
-            "iggyjoey", "hamlet_the_piggy", "realdiddykong", "lionelthehog", "nevillejacobs", "jackthecockatiel"];
+        var profiles = ["bonebone29", "dorito.goldenboy", "hamlet_the_piggy", "iamlilbub", 
+            "iggyjoey", "itsdougthepug", "jackthecockatiel", "jiffpom", "juniperfoxx", "lionelthehog",
+            "loki", "maple.the.pup", "marniethedog", "marutaro", "mensweardog", "nala_cat", 
+            "nevillejacobs", "omame_munchkin", "pumpkintheraccoon", "reagandoodle", "realdiddykong",
+             "this_girl_is_a_squirrel", "tibbythecorgi", "toby_littledude", "tunameltsmyheart"];
 
         for (var i = 0; i < profiles.length; i++){
             getProfile(table, profiles[i]);
