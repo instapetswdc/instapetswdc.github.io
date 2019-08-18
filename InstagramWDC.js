@@ -3,6 +3,10 @@
 
     myConnector.getSchema = function (schemaCallback) {
         var cols = [{
+            id: "post_id",
+            alias: "post",
+            dataType: tableau.dataTypeEnum.int
+        },{
             id: "graphql__user__biography",
             alias: "biography",
             dataType: tableau.dataTypeEnum.string
@@ -81,9 +85,11 @@
 function getProfile(table, profile, doneCallback){
     $.getJSON("https://www.instagram.com/" + profile + "/?__a=1", function(resp) {
         var tableData = [];
+        var postNumber = 1; 
         // Iterate over the JSON object
         for (var j = 0, len = resp.graphql.user.edge_owner_to_timeline_media.edges.length; j < len; j++) {
             tableData.push({
+                "post_id": postNumber++, 
                 "graphql__user__biography": resp.graphql.user.biography,
                 "graphql__user__edge_followed_by__count": resp.graphql.user.edge_followed_by.count,
                 "graphql__user__full_name": resp.graphql.user.full_name,
