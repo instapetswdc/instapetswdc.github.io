@@ -104,8 +104,7 @@ function getProfile(table, profile, doneCallback){
                 "graphql__user__edge_owner_to_timeline_media__count": resp.graphql.user.edge_owner_to_timeline_media.count,
                 "graphql_user_edge_owner_to_timeline_media_edges_node_edge_media_to_comment_count": resp.graphql.user.edge_owner_to_timeline_media.edges[j].node.edge_media_to_comment.count,
                 "graphql_user_edge_owner_to_timeline_media_edges_node_edge_liked_by_count": resp.graphql.user.edge_owner_to_timeline_media.edges[j].node.edge_liked_by.count,
-                "graphql_user_edge_owner_to_timeline_media_edges_node_display_url": resp.graphql.user.edge_owner_to_timeline_media.edges[j].node.edge_liked_by.count
-
+                "graphql_user_edge_owner_to_timeline_media_edges_node_display_url": resp.graphql.user.edge_owner_to_timeline_media.edges[j].node.display_url
             });
         }    
         table.appendRows(tableData);
